@@ -14,7 +14,9 @@ O objetivo do projeto é criar uma presença online profissional, funcional e re
 
 **EM DESENVOLVIMENTO**
 
-Estamos atualmente na fase de estruturação e estilização das principais seções. O Header, Footer e a seção 'Quem Somos' já estão concluídos.
+Estamos atualmente na fase de estruturação e estilização das principais seções.
+O Header, Footer, a seção 'Quem Somos' e a seção de Introdução ('Welcome') já estão concluídos,
+incluindo a implementação de layout Flexbox para a disposição lado a lado de texto e imagem.
 
 ### 🛠️ Tecnologias Utilizadas
 
