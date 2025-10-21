@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarissa Goettems - Estética Avançada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -138,7 +140,70 @@
     
     <section>
     <h2>Depoimentos de clientes</h2>
-    <!--Incluir espaço para depoimento de clientes; Possivelmente um Carrossel-->
+        
+        <div class="swiper testimonial-swiper-container">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Desde que comecei meus tratamentos com a Clarissa, não sinto apenas melhora na 
+                            minha pele, mas na minha autoestima. O cuidado é atencioso e o ambiente é de paz. 
+                            Não troco por nada!"</p>
+                        <div class="client-info">
+                            <span class="client-name">Bárbara Zucchetto, 40 anos</span>
+                            <span class="service-name"> • Peeling de diamante e Limpeza de pele</span>
+                        </div>
+                    </div>        
+
+                    <div class="swiper-slide testimonial-card">
+                        <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                        </div>
+                            <p>"O ultrassom microfocado realmente fez milagres no meu contorno facial! O resultado é 
+                                natural e o procedimento foi supertranquilo e indolor. 
+                                Profissionalismo e tecnologia de ponta"</p>
+                            <div class="client-info">
+                                <span class="client-name">Juana Maristane, 44 anos</span>
+                                <span class="service-name"> • Limpeza de pele e Ultrassom Microfocado</span>
+                            </div>
+                    </div>
+                    
+                    <div class="swiper-slide testimonial-card">
+                        <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Confio cegamente na experiência de anos da Clarissa. Ela é transparente, explica 
+                            cada passo e usa produtos e aparelhos de altíssima qualidade. Voltei a caber em
+                            um terno que havia comprado há 7 anos! Recomendo de olhos fechados!"</p>
+                        <div class="client-info">
+                            <span class="client-name">Ricardo Dias, 34 anos</span>
+                            <span class="service-name"> • Lipocavitação</span>
+                        </div>
+                    </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>    
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+        </div>
+
     </section>
 
     <section>
@@ -169,6 +234,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>

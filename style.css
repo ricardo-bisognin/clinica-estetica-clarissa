@@ -249,6 +249,104 @@ p {
     margin-bottom: 1em;
 }
 
+/*Seção: Depoimento de clientes*/
+
+.testimonial-swiper-container {
+    width: 100%;
+    min-height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px;
+}
+
+.testimonial-card {
+    background-color: #f7f7f7;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #333333;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.swiper-slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #FF8BAA;
+    --swiper-navigation-color: #FF8BAA;
+    font-size: 2.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--swiper-navigation-color);
+    height: var(--swiper-navigation-color);
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FF8BAA;
+}
+
+.rating {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.rating .fa-star {
+    color: #FF8BAA;
+}
+
+.client-info {
+    border-top: 1px solid #eeeeee;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #777777;
+    font-weight: 500;
+}
+
+.client-name {
+    font-weight: bold;
+    color: #555555;
+}
+
+.service-name {
+    color: #999999;
+}
+
+/*Seção: Rodapé*/
+
 footer {
     background-color: #FFD1D7;
     color: #333333;
@@ -309,6 +407,8 @@ footer {
     justify-content: center;
     margin: 5px 0;
 }
+
+/*Responsividade*/
 
 @media (max-width: 768px) {
     header {
@@ -373,6 +473,42 @@ footer {
     .bio-img {
         width: 60%;
         margin: 0 auto 20px auto;
+    }
+
+    .testimonial-swiper-container {
+        padding: 0 15px;
+        height: auto;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 0px;
+        flex-shrink: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 2em;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #FF8BAA;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 2.5em;
+    }
+
+    .swiper-button-prev {
+        left: 0px;
+    }
+
+    .swiper-button-next {
+        right: 0px;
     }
 
     .footer-content {
