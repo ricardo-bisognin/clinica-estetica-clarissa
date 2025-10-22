@@ -21,6 +21,9 @@ const swiper = new Swiper('.testimonial-swiper-container', {
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
+    autoHeight: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
 
     /*Paginação*/
     pagination: {
@@ -33,20 +36,5 @@ const swiper = new Swiper('.testimonial-swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    /*Responsividade - break points*/
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            centeredSlides: false,
-        },
-
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            centeredSlides: false,
-        },
-    }
 });
 });

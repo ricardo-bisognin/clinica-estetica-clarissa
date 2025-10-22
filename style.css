@@ -3,6 +3,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;    
 }
 
+/* Header */
+
 header {
     background-color: #FFD1D7;
     min-height: 200px;
@@ -118,6 +120,8 @@ a {
     align-items: center;    
 }
 
+/* Main */ 
+
 main {
     max-width: 900px;
     margin: 0 auto;    
@@ -131,6 +135,8 @@ section {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Seção: Boas-vindas */
 
 .intro-welcome {
     padding: 20px;
@@ -186,6 +192,8 @@ section {
     color: #333333;
     font-weight: bold;
 }
+
+/* Seção: Quem somos */ 
 
 .bio-container {
     display: flex;
@@ -253,7 +261,6 @@ p {
 
 .testimonial-swiper-container {
     width: 100%;
-    min-height: 300px;
     margin: 20px auto;
     overflow: hidden;
     position: relative;
@@ -269,10 +276,11 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     box-sizing: border-box;
-    width: 100%;
-    max-width: 350px;
+    width: auto;
+    max-width: 100%;
+    min-height: 250px;
+    margin: 0 auto;
 }
 
 .testimonial-card p {
@@ -285,10 +293,11 @@ p {
 }
 
 .swiper-slide {
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100% !important;
 }
 
 .swiper-button-next,
@@ -300,6 +309,11 @@ p {
     transform: translateY(-50%);
     width: var(--swiper-navigation-color);
     height: var(--swiper-navigation-color);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 2.5em;
 }
 
 .swiper-button-prev {
@@ -476,39 +490,12 @@ footer {
     }
 
     .testimonial-swiper-container {
-        padding: 0 15px;
-        height: auto;
-    }
-
-    .testimonial-card {
-        width: 100%;
-        max-width: 350px;
-        margin-bottom: 0px;
-        flex-shrink: 0;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        font-size: 2em;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #FF8BAA;
-        width: 30px;
-        height: 30px;
-        font-size: 18px;
+        padding: 0 5px;        
     }
 
     .swiper-button-next::after,
     .swiper-button-prev::after {
-        font-size: 2.5em;
-    }
-
-    .swiper-button-prev {
-        left: 0px;
-    }
-
-    .swiper-button-next {
-        right: 0px;
+        font-size: 1.0em;
     }
 
     .footer-content {
