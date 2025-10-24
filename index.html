@@ -203,12 +203,69 @@
 
     </section>
 
-    <section>
+    <section id="contato">
     <h2>Contato</h2>
     <!--Incluir mapa para fácil localização; ao lado, endereço físico, 
     telefones/whatsapp e links para redes sociais, e um formulário simplificado para mensagens pelo site-->
     
-    <a href="https://api.whatsapp.com/send?phone=SEUNUMERO">Agende sua avaliação</a>
+        <div class="contact-container">
+
+            <div class="contact-info-block">
+                <h3>Nossa Clínica</h3>
+                <p><strong>Endereço:</strong> [Incluir o endereço completo aqui]</p>
+                <p><strong>Telefone:</strong> [Incluir o telefone fixo aqui</p>
+                <p><strong>Whatsapp:</strong>  </p><a href="https://wa.me/SEUNUMERO?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos." target="_blank"> [Inserir o número do Whastapp aqui]</a>
+                <p class="schedule-call-to-action">
+                    <a href="https://wa.me/SEUNUMERO?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" class="whatsapp-button">Agende sua avaliação <i class="fab fa-whatsapp"></i></a>
+                </p>
+            </div>
+
+            <div class="social-media-contact-block">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="URL_DO_INSTAGRAM" target="_blank" aria-label="Instagram"> <i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="URL_DO_FACEBOOK" target="_blank" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> Facebook</a>
+                </div>
+            </div>
+
+            <div class="contact-map-block">
+                <h3>Localização</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4063.0329644551625!2d-51.81532842441499!3d-30.85147027452718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951a771f5dbf4e5d%3A0xb17f56670314d25a!2sPrefeitura%20Municipal%20de%20Camaqu%C3%A3!5e1!3m2!1spt-BR!2sbr!4v1761334827761!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="100%" height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+            </div>
+
+            <div class="contact-form-block">
+                <h3>Contacte-nos</h3>
+                <form action="SEU_SCRIPT_DE_ENVIO_AQUI" method="post" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <div class="form-group">
+                            <label for="phone">Telefone (opcional):</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea name="message" id="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+
+  
     <!--Espaço destinado a um agendamento facilitado; possivelmente com um link fácil para o whatsapp-->
     </section>
 
