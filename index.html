@@ -12,41 +12,43 @@
 
     <header>
         <!--A página será única, com os links da lista abaixo remetendo as ancoras futuras (lembrar como fazer isso!)-->
-        
-        <img src="imagens/Logo 1.png" alt="Logo da empresa">
+        <div class="header-content-wrapper">
 
-        <div class="header-right-content">
+            <img src="imagens/Logo 1.png" alt="Logotipo - Clarissa Goettems - Estética Avançada">
 
-            <h1>Clarissa Goettems - Estética Avançada</h1>
+            <div class="header-right-content">
 
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#quem-somos">Quem somos</a></li>
-                    <li><a href="#tratamentos">Tratamentos</a>
-                        <ul>
-                            <li><a href="#">Corporais</a>
-                                <ul>
-                                    <li><a href="#massoterapia">Massoterapia</a></li>
-                                    <li><a href="#drenagem-linfatica">Drenagem linfática</a></li>
-                                    <li><a href="#lipocavitacao">Lipocavitação</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Faciais</a>
-                                <ul>
-                                    <li><a href="#limpeza-pele">Limpeza de pele</a></li>
-                                    <li><a href="#us-microfocado">Ultrassom microfocado</a></li>
-                                    <li><a href="#peeling-diamante">Peeling de diamante</a></li>
-                                </ul>
-                            </li>
-                        </ul></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+                <h1>Clarissa Goettems - Estética Avançada</h1>
+
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#quem-somos">Quem somos</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a>
+                            <ul>
+                                <li><a href="#">Corporais</a>
+                                    <ul>
+                                        <li><a href="#massoterapia">Massoterapia</a></li>
+                                        <li><a href="#drenagem-linfatica">Drenagem linfática</a></li>
+                                        <li><a href="#lipocavitacao">Lipocavitação</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Faciais</a>
+                                    <ul>
+                                        <li><a href="#limpeza-pele">Limpeza de pele</a></li>
+                                        <li><a href="#us-microfocado">Ultrassom microfocado</a></li>
+                                        <li><a href="#peeling-diamante">Peeling de diamante</a></li>
+                                    </ul>
+                                </li>
+                            </ul></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main id="home">
 
     <section class="intro-welcome">
         <h2>Sua jornada de beleza começa aqui</h2>
@@ -73,7 +75,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="quem-somos">
     <h2>Quem somos</h2>
     
         <div class="bio-container">
@@ -114,7 +116,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="tratamentos">
     <h2>Tratamentos</h2>
     <!--Incluir imagens bonitinhas disso (Se não achar na web, criar com IA)-->
     
@@ -223,15 +225,16 @@
             <div class="social-media-contact-block">
                 <h3>Siga-nos</h3>
                 <div class="social-icons">
+                    <a href="https://wa.me/SEUNUMERO?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank" aria-label="Whastapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     <a href="URL_DO_INSTAGRAM" target="_blank" aria-label="Instagram"> <i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="URL_DO_FACEBOOK" target="_blank" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="URL_DO_FACEBOOK" target="_blank" aria-label="Facebook"> <i class="fab fa-facebook-f"></i> Facebook</a>                    
                 </div>
             </div>
 
             <div class="contact-map-block">
                 <h3>Localização</h3>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4063.0329644551625!2d-51.81532842441499!3d-30.85147027452718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951a771f5dbf4e5d%3A0xb17f56670314d25a!2sPrefeitura%20Municipal%20de%20Camaqu%C3%A3!5e1!3m2!1spt-BR!2sbr!4v1761334827761!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                width="100%" height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+                </iframe>
             </div>
 
             <div class="contact-form-block">
