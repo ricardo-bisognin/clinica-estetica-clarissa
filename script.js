@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- VARIÁVEIS GLOBAIS DE ESCOPO ---
+    const header = document.querySelector('header');
+    const body = document.body; // <-- Definida corretamente no escopo principal
+
     // --- FUNÇÕES DE UTILIDADE ---
 
     /* Calcula o tempo de experiência */
@@ -9,12 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* Inclui o header shrink (redimensionamento do header ao rolar) */
-    const header = document.querySelector('header'); // Seleciona o header uma vez
     function checkScroll() {
         if (window.scrollY > 50) {
             header.classList.add('header-scrolled');
+            body.classList.remove('header-large-scroll-offset'); // Remove o offset grande (header encolhido)
         } else {
             header.classList.remove('header-scrolled');
+            body.classList.add('header-large-scroll-offset'); // Adiciona o offset grande (header no topo)
         }
     }
 
@@ -27,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* 2. Atualiza o ano no rodapé */
-    const elementoAnoAtual = document.getElementById("current-year"); // Boa prática: selecionar uma vez
-    if (elementoAnoAtual) { // Verifica se o elemento existe
+    const elementoAnoAtual = document.getElementById("current-year");
+    if (elementoAnoAtual) {
         elementoAnoAtual.textContent = new Date().getFullYear();
     }
     
-    /* 3. Ativa o comportamento de header shrink no scroll */
+    /* 3. Ativa o comportamento de header shrink no scroll e controla o body offset */
     window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Executa uma vez no carregamento para ajustar o header se a página já estiver rolada
+    checkScroll(); // Executa uma vez no carregamento
 
     /* 4. Inclui o Swiper para os depoimentos de clientes */
     const swiper = new Swiper('.testimonial-swiper-container', {
@@ -60,36 +65,5 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
-    /* 5. Rolagem dinâmica suave para as âncoras */
-    const navLinks = document.querySelectorAll('nav ul li a');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href'); // CORRIGIDO: getAtribute -> getAttribute
-            // Verifique se é um link âncora interno (começa com # e não é apenas #)
-            if (targetId.startsWith('#') && targetId.length > 1) { // CORRIGIDO: lenght -> length
-                e.preventDefault(); // Impede a rolagem padrão do navegador
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Obtém a altura atual do header
-                    const headerHeight = header.offsetHeight; // Usa a variável 'header' já declarada
-
-                    // Calcula a posição de rolagem ajustada
-                    // Queremos que o topo do elemento fique logo abaixo do header
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                    // Adiciona um pequeno "respiro" extra se desejar, ex: + 5
-                    
-                    const offsetPosition = elementPosition - headerHeight;
-
-                    // Ajusta o scroll com comportamento suave
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-}); // Fim do único document.addEventListener('DOMContentLoaded', function() {
+    // Removendo toda a lógica de rolagem dinâmica (como combinado)
+});
