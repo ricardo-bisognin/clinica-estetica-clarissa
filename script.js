@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
+        speed: 900,
         centeredSlides: true,
         autoHeight: true,
         watchSlidesProgress: true,
@@ -63,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+
+        /* Autoplay do swiper*/
+        autoplay: {
+            delay: 5000, // tempo em milissegundos entre os slides (aqui: 5 segundos)
+            disableOnInteraction: false, // continua passando mesmo após o usuário clicar
+        }
     });
 
     // Removendo toda a lógica de rolagem dinâmica (como combinado)

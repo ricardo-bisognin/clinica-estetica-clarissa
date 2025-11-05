@@ -1,5 +1,25 @@
+:root {
+  --cor-principal: #d4a373;
+  --cor-secundaria: #f6f1eb;
+  --cor-texto: #3a3a3a;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+.btn {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #B9895E;
 }
 
 section[id] {
@@ -8,7 +28,7 @@ section[id] {
 
 body {
     background-color: #FAF9F6;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body.header-large-scroll-offset {
@@ -25,22 +45,22 @@ header {
     background-position: center bottom;
     background-repeat: no-repeat;
     position: fixed;
-    justify-content: space-between;
-    transition: all 0.3s ease-in-out;
-    top: 0px;
-    left: 9px;
-    right: 9px;
-    width: calc(100% - 18px); 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 16px);
+    max-width: 900px;
     z-index: 1000;
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-content-wrapper {
     max-width: 900px;
     margin: 0 auto;
-    padding: 15px 10px;
+    padding: 15px 10px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +103,8 @@ header img {
 
 main {
     padding-top: 202px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .nav {
@@ -233,6 +255,66 @@ section {
     color: #555555;
 }
 
+/* --- Destaques da Intro (Missão, Visão, Valores) --- */
+
+.intro-highlights {
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.intro-highlights h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.highlight-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.highlight-card {
+  flex: 1;
+  max-width: 200px;
+  background: rgba(255, 245, 248, 0.65); /* translúcido */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 16px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.highlight-card i {
+  font-size: 1.7em;
+  color: #FF8BAA;
+  margin-bottom: 6px;
+}
+
+.highlight-card h4 {
+  font-size: 1.05em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.highlight-card p {
+  font-size: 0.85em;
+  color: #555;
+  text-align: center;    
+  line-height: 1.4;
+}
+
 .intro-image-block {
     flex-basis: 35%;
     flex-shrink: 0;
@@ -351,6 +433,8 @@ p {
     margin-top: 15px;
     margin-bottom: 20px;
     font-size: 1em;
+    max-width: 90%;
+    margin: 20px auto;
 }
 
 .swiper-slide {
@@ -363,26 +447,47 @@ p {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #FF8BAA;
-    --swiper-navigation-color: #FF8BAA;
-    font-size: 2.5em;
-    top: 50%;
-    transform: translateY(-50%);
-    width: var(--swiper-navigation-color);
-    height: var(--swiper-navigation-color);
+  background: rgba(255, 225, 233, 0.55); /* translúcido rosé */
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: 0.3s ease;  
 }
 
-.swiper-button-next::after,
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 225, 233, 0.85);
+  transform: scale(1.08);
+}
+
+/* Substitui ícones padrão do Swiper */
+.swiper-button-next::after {
+  content: '\f054'; /* ícone chevron right fino */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #FF8BAA;
+}
+
 .swiper-button-prev::after {
-    font-size: 2.5em;
+  content: '\f053'; /* ícone chevron left fino */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #FF8BAA;
 }
 
 .swiper-button-prev {
-    left: 10px;
+    left: -45px;
 }
 
 .swiper-button-next {
-    right: 10px;
+    right: -45px;
 }
 
 .swiper-pagination-bullet {
@@ -744,6 +849,16 @@ footer {
         width: 60%;
         margin: 0 auto 20px auto;
     }
+
+  .highlight-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .highlight-card {
+    max-width: 260px;
+    margin-bottom: 12px;
+  }
 
     .testimonial-swiper-container {
         padding: 0 5px;        
