@@ -271,24 +271,27 @@ section {
 }
 
 .highlight-cards {
-  display: flex;
-  justify-content: space-around;
-  gap: 12px;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas iguais */
+  gap: 16px;
+  width: 100%;
 }
 
 .highlight-card {
-  flex: 1;
-  max-width: 200px;
-  background: rgba(255, 245, 248, 0.65); /* translúcido */
+  background: rgba(255, 245, 248, 0.65);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 16px;
-  padding: 16px 12px;
+  padding: 10px 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* mantém tudo centralizado */
+  justify-content: flex-start; /* compacta o conteúdo */
   text-align: center;
-  align-self: flex-start;
+  padding: 16px 12px;
+  min-height: 230px; /* altura elegante */
 }
 
 .highlight-card:hover {
@@ -309,10 +312,10 @@ section {
 }
 
 .highlight-card p {
-  font-size: 0.85em;
-  color: #555;
-  text-align: center;    
-  line-height: 1.4;
+  margin-top: 8px;
+  margin-bottom: 0;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .intro-image-block {
@@ -445,49 +448,91 @@ p {
     width: 100% !important;
 }
 
+/* Remove seta azul padrão do Swiper */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* Força o Swiper a obedecer */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  background-image: none !important;
+}
+
+/* Elimina imagem de fundo em qualquer estado */
 .swiper-button-next,
 .swiper-button-prev {
-  background: rgba(255, 225, 233, 0.55); /* translúcido rosé */
+  background-image: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  background: none !important;
+
+}
+
+/* Remove a seta padrão do Swiper de forma real */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "" !important;
+  font-family: none !important;
+  font-size: 0 !important;
+}
+
+/* Remove o SVG gigantesco padrão do Swiper */
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    display: none !important;
+}
+
+/* Bolha translúcida diamante */
+.swiper-button-next,
+.swiper-button-prev {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(8px);
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  transition: 0.3s ease;  
+  border: 1px solid rgba(200,200,200,0.5);
+  transition: 0.3s ease;
+  z-index: 5;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(255, 225, 233, 0.85);
-  transform: scale(1.08);
-}
-
-/* Substitui ícones padrão do Swiper */
-.swiper-button-next::after {
-  content: '\f054'; /* ícone chevron right fino */
+/* Ícone rosé fino */
+.swiper-button-next::before,
+.swiper-button-prev::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #FF8BAA;
 }
 
-.swiper-button-prev::after {
-  content: '\f053'; /* ícone chevron left fino */
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 1.3em;
-  color: #FF8BAA;
+/* Indicando os ícones corretos */
+.swiper-button-next::before {
+  content: '\f054'; /* seta direita */
+}
+
+.swiper-button-prev::before {
+  content: '\f053'; /* seta esquerda */
+}
+
+/* Ajuste de posição */
+.swiper-button-next {
+  right: -35px;
 }
 
 .swiper-button-prev {
-    left: -45px;
+  left: -35px;
 }
 
-.swiper-button-next {
-    right: -45px;
+/* Hover discreto */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.08);
 }
 
 .swiper-pagination-bullet {
