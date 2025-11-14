@@ -1,57 +1,78 @@
-# 🌸 Clarissa Goettems - Estética Avançada
+🌸 Clarissa Goettems — Estética Avançada
 
-## Website Institucional e Portfólio de Serviços
+Website Institucional & Portfólio de Serviços
 
----
+📝 Sobre o Projeto
 
-### 📝 Descrição do Projeto
+Este é o repositório oficial do website da Clínica Clarissa Goettems, desenvolvido para apresentar a trajetória, a expertise e os serviços de estética avançada oferecidos pela profissional.
 
-Este é o repositório oficial do website da Clínica de Estética Avançada de Clarissa Goettems.
+O foco do site é entregar:
 
-O objetivo do projeto é criar uma presença online profissional, funcional e responsiva para apresentar a jornada, experiência e portfólio de tratamentos oferecidos pela esteticista e cosmetóloga. O site foca em realçar a autoridade e o cuidado personalizado oferecido aos clientes.
+visual elegante
 
-### 🚀 Status do Projeto
+navegação fluida
 
-**EM DESENVOLVIMENTO - Foco: Conteúdo dos Tratamentos**
+comunicação clara
 
-A estruturação e a estilização das principais seções e a lógica de interação (JS) estão estáveis. O foco atual é no preenchimento do conteúdo principal.
+experiência acolhedora e profissional
 
-| Seção/Funcionalidade | Status | Observações |
-| :--- | :--- | :--- |
-| **Estrutura/Estilização Base** | ✅ Concluído | HTML Semântico e CSS Responsivo (Flexbox/Grid) prontos. |
-| **Header Fixo (JS)** | ✅ Estável (Revisado) | Lógica de encolhimento e ajuste de offset via JavaScript (agora limpo) funcionando. |
-| **Seções 'Home' & 'Quem Somos' & 'Depoimentos'** | ✅ Concluídas | Conteúdos preenchidos. Cálculo de anos de experiência e Swiper de depoimentos implementados. |
-| **Seção 'Contato'** | ⚠️ Estável (Conteúdo Pendente) | Layout e estilização finalizados. Falta apenas a inserção dos dados reais (endereço, telefone, links, mapa). |
-| **Seção 'Tratamentos'** | ❌ **Pendente** | **PRIORIDADE:** Sub-tópicos definidos, mas sem a descrição dos serviços e benefícios. |
+Tudo em sintonia com a identidade da clínica.
 
----
+🚀 Status Atual do Projeto
 
-### 🎯 Próximo Foco
+📌 Versão Desktop refinada — Responsividade começa em breve
+📌 Header, Intro, Quem Somos, Depoimentos e Contato revisados e modernizados
 
-O próximo passo é preencher o conteúdo da seção de **Tratamentos** (`<section id="tratamentos">`) com as descrições detalhadas dos serviços.
+Progresso por Seção
+Seção / Funcionalidade	Status	Detalhes
+Base HTML/CSS	✅	Estrutura semântica + Grid + Flex + Glass leve
+Header Fixo	⚠️	Shrink funcional (pequeno refinamento pendente)
+Home / Intro	✅	Textos ajustados + cards compactos
+Quem Somos	✅	Estrutura completa e revisada
+Depoimentos (Swiper)	✅	Setas personalizadas + diamantes na paginação
+Contato (Nossa Clínica)	✅	Layout premium + modal do mapa funcionando
+Tratamentos	❌	Próxima etapa do desenvolvimento
+🎯 Próximos Passos
 
-### 🛠️ Tecnologias Utilizadas
+Ajustar espaçamentos finais entre as seções (padrão de elegância da INTRO)
 
-O projeto é desenvolvido puramente com o "Triple Crown" do desenvolvimento web, visando máxima performance e compatibilidade:
+Refinar comportamento do header
 
-* **HTML5:** Estrutura semântica e acessível do conteúdo.
-* **CSS3:** Estilização e layout responsivo (Flexbox, Grid e Media Queries).
-* **JavaScript:** Interações simples, como a atualização automática de dados e a manipulação do header.
+Finalizar seção de Tratamentos (descrições + cards)
 
-### ⚙️ Como Rodar o Projeto Localmente
+Implementar responsividade completa (Mobile e Tablet)
 
-É muito simples visualizar o site em seu navegador:
+🛠️ Tecnologias Utilizadas
 
-1.  **Clone o Repositório:**
-    ```bash
-    git clone [https://github.com/ricardo-bisognin/clinica-estetica-clarissa](https://github.com/ricardo-bisognin/clinica-estetica-clarissa)
-    ```
-2.  **Abra a Pasta:** Navegue até a pasta recém-clonada em seu sistema de arquivos.
-3.  **Visualizar:** Clique duas vezes no arquivo `index.html`. O site será aberto automaticamente em seu navegador padrão.
+HTML5 — Estrutura limpa e semântica
 
-### ✍️ Autor
+CSS3 — Estilização manual com foco em estética minimalista
 
-**Desenvolvedor Front-end:** Ricardo Bisognin Dias
+JavaScript — Interações essenciais e modal do mapa
 
-* **GitHub:** @ricardo-bisognin
-* **Contato:** bisognin.dias@gmail.com
+SwiperJS — Carrossel premium para depoimentos
+
+Font Awesome — Ícones minimalistas e consistentes
+
+Google Maps Embed — Mapa real com modal ampliado
+
+⚙️ Rodando o Projeto Localmente
+
+Clone o repositório:
+
+git clone https://github.com/ricardo-bisognin/clinica-estetica-clarissa
+
+
+Abra a pasta do projeto.
+
+Execute o arquivo index.html no navegador.
+
+Sem dependências. Sem instalações extras. Simples, rápido e direto.
+
+✍️ Autor
+
+Desenvolvedor Front-end: Ricardo Bisognin Dias
+
+GitHub: @ricardo-bisognin
+
+Contato: bisognin.dias@gmail.com

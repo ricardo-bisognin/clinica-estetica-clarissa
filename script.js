@@ -1,76 +1,95 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- VARIÁVEIS GLOBAIS DE ESCOPO ---
+    // --- HEADER SHRINK ---
     const header = document.querySelector('header');
-    const body = document.body; // <-- Definida corretamente no escopo principal
+    const body = document.body;
 
-    // --- FUNÇÕES DE UTILIDADE ---
-
-    /* Calcula o tempo de experiência */
-    function calcularTempoExperiencia(anoInicial) {
-        const anoAtual = new Date().getFullYear();
-        return anoAtual - anoInicial;
-    }
-
-    /* Inclui o header shrink (redimensionamento do header ao rolar) */
     function checkScroll() {
         if (window.scrollY > 50) {
             header.classList.add('header-scrolled');
-            body.classList.remove('header-large-scroll-offset'); // Remove o offset grande (header encolhido)
+            body.classList.remove('header-large-scroll-offset');
         } else {
             header.classList.remove('header-scrolled');
-            body.classList.add('header-large-scroll-offset'); // Adiciona o offset grande (header no topo)
+            body.classList.add('header-large-scroll-offset');
         }
     }
 
-    // --- INICIALIZAÇÕES QUANDO O DOM ESTIVER CARREGADO ---
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
 
-    /* 1. Atualiza os anos de experiência */
+
+    // --- ANOS DE EXPERIÊNCIA ---
     const elementoAnos = document.getElementById("anos-experiencia");
     if (elementoAnos) {
-        elementoAnos.textContent = calcularTempoExperiencia(2012);
+        const anoAtual = new Date().getFullYear();
+        elementoAnos.textContent = anoAtual - 2012;
     }
 
-    /* 2. Atualiza o ano no rodapé */
+
+    // --- ANO RODAPÉ ---
     const elementoAnoAtual = document.getElementById("current-year");
     if (elementoAnoAtual) {
         elementoAnoAtual.textContent = new Date().getFullYear();
     }
-    
-    /* 3. Ativa o comportamento de header shrink no scroll e controla o body offset */
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Executa uma vez no carregamento
 
-    /* 4. Inclui o Swiper para os depoimentos de clientes */
-    const swiper = new Swiper('.testimonial-swiper-container', {
-        /* Opções do swiper */
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        speed: 900,
-        centeredSlides: true,
-        autoHeight: true,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
 
-        /* Paginação */
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+    // --- SWIPER DE DEPOIMENTOS ---
+    try {
+        const swiper = new Swiper('.testimonial-swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 900,
+            centeredSlides: true,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            }
+        });
+    } catch (e) {
+        console.warn("Falha ao iniciar o Swiper:", e);
+    }
 
-        /* Botões de navegação */
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    // --- MODAL DO MAPA (scroll travado e sem abrir Google) ---
+    const mapModal = document.getElementById("mapModal");
+    const mapTriggerBtn = document.getElementById("mapZoomTriggerBtn");
+    const mapClose = document.getElementById("mapClose");
 
-        /* Autoplay do swiper*/
-        autoplay: {
-            delay: 5000, // tempo em milissegundos entre os slides (aqui: 5 segundos)
-            disableOnInteraction: false, // continua passando mesmo após o usuário clicar
+    if (mapTriggerBtn && mapModal && mapClose) {
+
+    function openMapModal() {
+        mapModal.style.display = "flex";
+        document.body.style.overflow = "hidden"; // trava scroll do fundo
+    }
+
+    function closeMapModal() {
+        mapModal.style.display = "none";
+        document.body.style.overflow = ""; // libera scroll do fundo
+    }
+
+    mapTriggerBtn.addEventListener("click", openMapModal);
+    mapClose.addEventListener("click", closeMapModal);
+
+    mapModal.addEventListener("click", function(e) {
+        if (e.target === mapModal) {
+        closeMapModal();
         }
     });
 
-    // Removendo toda a lógica de rolagem dinâmica (como combinado)
+    // fechar com ESC
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && mapModal.style.display === "flex") {
+        closeMapModal();
+        }
+    });
+    }
 });
