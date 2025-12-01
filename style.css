@@ -45,12 +45,13 @@ header {
   width: 100%;
   z-index: 1000;
   background: transparent; /* sem imagem aqui */  
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 /* Wrapper visual real */
 .header-content-wrapper {
-  max-width: 100%;  
+  max-width: 100%;
+  height: 180px;  
   background-image: url("imagens/Banner 1.png");
   background-size: cover;
   background-position: center bottom;
@@ -64,23 +65,31 @@ header {
   transition: 0.3s ease-in-out;
 }
 
-.header-scrolled {
-    min-height: 60px;
-    padding: 0;
-    & .header-content-wrapper {
-        padding: 5px 10px;
-    }
-    & img {
-        width: 65px;
-    }
-    & h1 {
-        font-size: 1.5em;
-        margin: 0;
-    }
-    & nav ul li a {
-        padding: 5px 10px;
-        font-size: 0.9em;
-    }
+header.header-scrolled {
+    height: 120px;              /* header mais baixo quando rola */
+}
+
+header.header-scrolled .header-content-wrapper {
+    padding: 5px 10px;          /* menos respiro */
+    height: 120px;
+}
+
+/* Logo menor só quando está scrolled */
+header.header-scrolled img {
+    height: 110px;              /* aqui você ajusta o tamanho “compacto” */
+    margin-top: 5px;
+}
+
+/* Título um pouco menor no scrolled (opcional) */
+header.header-scrolled h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Menu um pouco mais compacto no scrolled (opcional) */
+header.header-scrolled nav ul li a {
+    padding: 5px 10px;
+    font-size: 0.95rem;
 }
 
 .header-right-content {
@@ -91,10 +100,15 @@ header {
 }
 
 header img {
-    width: 180px;
-    height: auto;
+    width: auto;
+    height: 200px;
+    max-height: 20vh;
     transition: all 0.3s ease-in-out;
     flex-shrink: 0;
+    position: absolute;
+    left: 11.5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 main {
