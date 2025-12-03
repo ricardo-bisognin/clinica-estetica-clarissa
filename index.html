@@ -127,28 +127,161 @@
     </section>
 
     <section id="tratamentos">
-    <h2>Tratamentos</h2>
-    <!--Incluir imagens bonitinhas disso (Se não achar na web, criar com IA)-->
-    
-    <h3>Corporais</h3>
-    <h4>Massoterapia</h4>
-    <!--Retirar "massoterapia" e incluir tratamentos específicos: como (terapias manuais) = 
-    massagem relaxante; ventosaterapia; pedras quentes; massagem modeladora; drenagem linfática; 
-    pós-operatório; -->
-    <!--Incluir características do tratamento-->
-    <h4>Drenagem linfática</h4>
-    <!--Incluir características do tratamento-->
-    <h4>Lipocavitação</h4>
-    <!--Incluir características do tratamento-->
+        <h2>Tratamentos</h2>
 
-    <h3>Faciais</h3>
-    <h4>Limpeza de pele</h4>
-    <!--Incluir características do tratamento-->
-    <h4>Ultrassom microfocado</h4>
-    <!--Incluir características do tratamento-->
-    <h4>Peeling de diamante</h4>
-    <!--Incluir características do tratamento-->
-    </section>
+        <!-- Abinhas de categoria -->
+        <div class="tratamentos-tabs">
+            <button class="trat-tab ativa" data-target="corp">Corporais</button>
+            <button class="trat-tab" data-target="face">Faciais</button>
+        </div>
+
+        <!-- ======================
+            TRATAMENTOS CORPORAIS
+            ====================== -->
+        <div class="tratamentos-grid ativa" id="trat-corp">
+            
+            <article class="trat-card" id="massoterapia">
+            <h3>Massoterapia Relaxante</h3>
+            <p class="trat-resumo">
+                Um momento de pausa para o corpo e a mente, com técnicas manuais focadas em aliviar tensões e trazer bem-estar.
+            </p>
+            <ul class="trat-beneficios">
+                <li>Reduz dores musculares e tensões</li>
+                <li>Melhora a circulação sanguínea</li>
+                <li>Ajuda a acalmar a mente e o estresse</li>
+            </ul>
+            <button class="trat-card-btn" data-trat="massoterapia">
+                Ver detalhes
+            </button>
+            </article>
+
+            <article class="trat-card" id="drenagem-linfatica">
+            <h3>Drenagem Linfática</h3>
+            <p class="trat-resumo">
+                Técnica suave que estimula o sistema linfático, auxiliando na redução de inchaços e da sensação de peso nas pernas.
+            </p>
+            <ul class="trat-beneficios">
+                <li>Auxilia na retenção de líquidos</li>
+                <li>Aliada no pós-operatório (com liberação médica)</li>
+                <li>Melhora a sensação de inchaço e cansaço</li>
+            </ul>
+            <button class="trat-card-btn" data-trat="drenagem">
+                Ver detalhes
+            </button>
+            </article>
+
+            <article class="trat-card" id="lipocavitacao">
+            <h3>Lipocavitação</h3>
+            <p class="trat-resumo">
+                Tecnologia que atua diretamente na gordura localizada, ajudando a redefinir contornos corporais de forma não invasiva.
+            </p>
+            <ul class="trat-beneficios">
+                <li>Auxilia na redução de medidas</li>
+                <li>Focado em áreas específicas de gordura</li>
+                <li>Procedimento não cirúrgico</li>
+            </ul>
+            <button class="trat-card-btn" data-trat="lipocavitacao">
+                Ver detalhes
+            </button>
+            </article>
+
+        </div>
+
+        <!-- ===================
+            TRATAMENTOS FACIAIS
+            =================== -->
+        <div class="tratamentos-grid" id="trat-face">
+            
+            <article class="trat-card" id="limpeza-pele">
+            <h3>Limpeza de Pele</h3>
+            <p class="trat-resumo">
+                Protocolo completo para remover impurezas, controlar oleosidade e devolver viço e frescor à pele.
+            </p>
+            <ul class="trat-beneficios">
+                <li>Desobstrução profunda dos poros</li>
+                <li>Melhora da textura e do toque da pele</li>
+                <li>Prepara a pele para outros tratamentos</li>
+            </ul>
+            <button class="trat-card-btn" data-trat="limpeza">
+                Ver detalhes
+            </button>
+            </article>
+
+            <article class="trat-card" id="us-microfocado">
+            <h3>Ultrassom Microfocado</h3>
+            <p class="trat-resumo">
+                Lifting não cirúrgico que estimula o colágeno em profundidade, promovendo firmeza e redefinição de contornos.
+            </p>
+            <ul class="trat-beneficios">
+                <li>Ajuda a melhorar a flacidez facial</li>
+                <li>Efeito lifting progressivo e natural</li>
+                <li>Estimula a produção de colágeno</li>
+            </ul>
+            <button class="trat-card-btn" data-trat="usmicrofocado">
+                Ver detalhes
+            </button>
+            </article>
+
+            <article class="trat-card" id="peeling-diamante">
+            <h3>Peeling de Diamante</h3>
+            <p class="trat-resumo">
+                Esfoliação mecânica controlada que renova suavemente a pele, uniformiza o tom e melhora o viço.
+            </p>
+            <ul class="trat-beneficios">
+                <li>Suaviza poros dilatados e marcas leves</li>
+                <li>Melhora o brilho e a luminosidade</li>
+                <li>Toque mais liso e uniforme</li>
+            </ul>
+            <button class="trat-card-btn" data-trat="peeling">
+                Ver detalhes
+            </button>
+            </article>
+
+        </div>
+        </section>
+
+        <!-- ============ MODAL DE DETALHES DOS TRATAMENTOS ============ -->
+        <div class="trat-modal" id="tratModal">
+        <div class="trat-modal-content">
+            <span class="trat-modal-close" id="tratClose">&times;</span>
+
+            <div class="trat-modal-body">
+            <h3 class="trat-modal-title">Título do Tratamento</h3>
+            <p class="trat-modal-intro">
+                Aqui entra uma descrição mais detalhada do tratamento selecionado.
+            </p>
+
+            <div class="trat-modal-grid">
+                <div class="trat-modal-info">
+                <h4>Para quem é indicado?</h4>
+                <p class="trat-modal-indicado"></p>
+
+                <h4>Como funciona?</h4>
+                <p class="trat-modal-como-funciona"></p>
+
+                <h4>Duração e frequência</h4>
+                <p class="trat-modal-duracao"></p>
+
+                <h4>Cuidados importantes</h4>
+                <p class="trat-modal-cuidados"></p>
+                </div>
+
+                <div class="trat-modal-media">
+                <div class="trat-modal-placeholder">
+                    Espaço reservado para imagem ou ilustração do tratamento.
+                </div>
+
+                <a href="https://wa.me/SEUNUMERO?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos."
+                    target="_blank"
+                    class="trat-modal-cta">
+                    Quero agendar uma avaliação
+                </a>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
     
     <section>
     <h2>Depoimentos de clientes</h2>
