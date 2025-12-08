@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="icon" type="image/png" href="imagens/Logo 2.png" sizes="32x32">
     <link rel="icon" type="image/png" href="imagens/Logo 2.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="imagens/Logo 2.png">
-    <link rel="manifest" href="">
+    <link rel="apple-touch-icon" href="imagens/Logo 2.png">    
 </head>
 <body>
 
@@ -138,51 +137,31 @@
         <!-- ======================
             TRATAMENTOS CORPORAIS
             ====================== -->
-        <div class="tratamentos-grid ativa" id="trat-corp">
-            
-            <article class="trat-card" id="massoterapia">
-            <h3>Massoterapia Relaxante</h3>
-            <p class="trat-resumo">
-                Um momento de pausa para o corpo e a mente, com técnicas manuais focadas em aliviar tensões e trazer bem-estar.
-            </p>
-            <ul class="trat-beneficios">
-                <li>Reduz dores musculares e tensões</li>
-                <li>Melhora a circulação sanguínea</li>
-                <li>Ajuda a acalmar a mente e o estresse</li>
-            </ul>
-            <button class="trat-card-btn" data-trat="massoterapia">
-                Ver detalhes
-            </button>
+
+            <div class="tratamentos-grid ativa" id="trat-corp">
+
+            <article class="trat-card" id="massoterapia" data-trat="massoterapia">
+                <img src="imagens/trat-massoterapia-relaxante.png"
+                     alt="Massoterapia relaxante em clínica de estética">
+                <h3>Massoterapia Relaxante</h3>
             </article>
 
-            <article class="trat-card" id="drenagem-linfatica">
-            <h3>Drenagem Linfática</h3>
-            <p class="trat-resumo">
-                Técnica suave que estimula o sistema linfático, auxiliando na redução de inchaços e da sensação de peso nas pernas.
-            </p>
-            <ul class="trat-beneficios">
-                <li>Auxilia na retenção de líquidos</li>
-                <li>Aliada no pós-operatório (com liberação médica)</li>
-                <li>Melhora a sensação de inchaço e cansaço</li>
-            </ul>
-            <button class="trat-card-btn" data-trat="drenagem">
-                Ver detalhes
-            </button>
+            <article class="trat-card" id="massoterapia-modeladora" data-trat="massomodeladora">
+                <img src="imagens/trat-massoterapia-modeladora.png"
+                     alt="Massoterapia modeladora em região abdominal">
+                <h3>Massoterapia Modeladora</h3>
             </article>
 
-            <article class="trat-card" id="lipocavitacao">
-            <h3>Lipocavitação</h3>
-            <p class="trat-resumo">
-                Tecnologia que atua diretamente na gordura localizada, ajudando a redefinir contornos corporais de forma não invasiva.
-            </p>
-            <ul class="trat-beneficios">
-                <li>Auxilia na redução de medidas</li>
-                <li>Focado em áreas específicas de gordura</li>
-                <li>Procedimento não cirúrgico</li>
-            </ul>
-            <button class="trat-card-btn" data-trat="lipocavitacao">
-                Ver detalhes
-            </button>
+            <article class="trat-card" id="drenagem-linfatica" data-trat="drenagem">
+                <img src="imagens/trat-drenagem-linfatica.png"
+                     alt="Drenagem linfática em pernas em clínica de estética">
+                <h3>Drenagem Linfática</h3>
+            </article>
+
+            <article class="trat-card" id="lipocavitacao" data-trat="lipocavitacao">
+                <img src="imagens/trat-lipocavitacao.png"
+                     alt="Lipocavitação para gordura localizada em clínica de estética">
+                <h3>Lipocavitação</h3>
             </article>
 
         </div>
@@ -191,53 +170,26 @@
             TRATAMENTOS FACIAIS
             =================== -->
         <div class="tratamentos-grid" id="trat-face">
-            
-            <article class="trat-card" id="limpeza-pele">
-            <h3>Limpeza de Pele</h3>
-            <p class="trat-resumo">
-                Protocolo completo para remover impurezas, controlar oleosidade e devolver viço e frescor à pele.
-            </p>
-            <ul class="trat-beneficios">
-                <li>Desobstrução profunda dos poros</li>
-                <li>Melhora da textura e do toque da pele</li>
-                <li>Prepara a pele para outros tratamentos</li>
-            </ul>
-            <button class="trat-card-btn" data-trat="limpeza">
-                Ver detalhes
-            </button>
+
+        <!-- TRATAMENTOS FACIAIS -->
+
+            <article class="trat-card" data-trat="limpeza">
+                <img src="imagens/trat-limpeza-pele.png" alt="Limpeza de Pele - tratamento facial na clínica da Dra. Clarissa">
+                <h3>Limpeza de Pele</h3>
             </article>
 
-            <article class="trat-card" id="us-microfocado">
-            <h3>Ultrassom Microfocado</h3>
-            <p class="trat-resumo">
-                Lifting não cirúrgico que estimula o colágeno em profundidade, promovendo firmeza e redefinição de contornos.
-            </p>
-            <ul class="trat-beneficios">
-                <li>Ajuda a melhorar a flacidez facial</li>
-                <li>Efeito lifting progressivo e natural</li>
-                <li>Estimula a produção de colágeno</li>
-            </ul>
-            <button class="trat-card-btn" data-trat="usmicrofocado">
-                Ver detalhes
-            </button>
+            <article class="trat-card" data-trat="usmicrofocado">
+                <img src="imagens/trat-us-microfocado.png" alt="Ultrassom microfocado - lifting não cirúrgico facial">
+                <h3>Ultrassom Microfocado</h3>
             </article>
 
-            <article class="trat-card" id="peeling-diamante">
-            <h3>Peeling de Diamante</h3>
-            <p class="trat-resumo">
-                Esfoliação mecânica controlada que renova suavemente a pele, uniformiza o tom e melhora o viço.
-            </p>
-            <ul class="trat-beneficios">
-                <li>Suaviza poros dilatados e marcas leves</li>
-                <li>Melhora o brilho e a luminosidade</li>
-                <li>Toque mais liso e uniforme</li>
-            </ul>
-            <button class="trat-card-btn" data-trat="peeling">
-                Ver detalhes
-            </button>
+            <article class="trat-card" data-trat="peeling">
+                <img src="imagens/trat-peeling-diamante.png" alt="Peeling de diamante - renovação suave da pele">
+                <h3>Peeling de Diamante</h3>
             </article>
 
         </div>
+
         </section>
 
         <!-- ============ MODAL DE DETALHES DOS TRATAMENTOS ============ -->
@@ -267,9 +219,9 @@
                 </div>
 
                 <div class="trat-modal-media">
-                <div class="trat-modal-placeholder">
-                    Espaço reservado para imagem ou ilustração do tratamento.
-                </div>
+                    <div class="trat-modal-image-box">
+                        <img src="" alt="" class="trat-modal-image">
+                    </div>
 
                 <a href="https://wa.me/SEUNUMERO?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos."
                     target="_blank"

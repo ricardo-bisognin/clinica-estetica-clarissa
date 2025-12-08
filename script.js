@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // 7. Modal de DETALHES dos TRATAMENTOS
   const tratModal = document.getElementById('tratModal');
   const tratClose = document.getElementById('tratClose');
-  const tratButtons = document.querySelectorAll('.trat-card-btn');
+  const tratCards = document.querySelectorAll('.trat-card[data-trat]');
 
   const tratamentosDetalhes = {
     massoterapia: {
@@ -144,7 +144,19 @@ document.addEventListener('DOMContentLoaded', function() {
       indicado: 'Pessoas com rotina intensa, estresse elevado, dores musculares leves ou tensão acumulada em pescoço, ombros e região lombar.',
       comoFunciona: 'Por meio de manobras manuais específicas, trabalhamos músculos e tecidos moles, melhorando a circulação e liberando pontos de tensão.',
       duracao: 'Sessões de aproximadamente 50 a 60 minutos, com frequência definida de acordo com a necessidade e objetivo de cada pessoa.',
-      cuidados: 'Evitar grandes refeições imediatamente antes da sessão e comunicar qualquer desconforto ou sensibilidade durante o atendimento.'
+      cuidados: 'Evitar grandes refeições imediatamente antes da sessão e comunicar qualquer desconforto ou sensibilidade durante o atendimento.',
+      imagem: 'imagens/trat-massoterapia-relaxante.png',
+      alt: 'Massoterapia relaxante em clínica de estética'
+    },
+    massomodeladora: {
+      titulo: 'Massoterapia Modeladora',
+      intro: 'Técnica manual com foco em contorno corporal, atuando em regiões específicas para melhorar o aspecto da pele e auxiliar na redução de medidas.',
+      indicado: 'Pessoas que desejam melhorar o contorno corporal, o aspecto de pele irregular e complementar protocolos de emagrecimento e definição.',
+      comoFunciona: 'A massoterapia modeladora utiliza manobras mais intensas e ritmadas, estimulando circulação, mobilização de tecidos e remodelagem dos contornos corporais.',
+      duracao: 'Sessões em média de 50 a 60 minutos, com frequência ajustada conforme objetivo e avaliação profissional.',
+      cuidados: 'Evitar sessões em áreas com inflamação ou dor intensa, comunicar desconfortos durante a sessão e seguir o intervalo entre sessões recomendado pela profissional.',
+      imagem: 'imagens/trat-massoterapia-modeladora.png',
+      alt: 'Massagem modeladora em região abdominal em clínica de estética'
     },
     drenagem: {
       titulo: 'Drenagem Linfática',
@@ -152,7 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
       indicado: 'Pessoas com retenção de líquidos, sensação de inchaço, pernas cansadas ou em fase de pós-operatório (sempre com liberação médica).',
       comoFunciona: 'São realizados movimentos leves, rítmicos e direcionados ao longo dos trajetos linfáticos, auxiliando o organismo a eliminar o excesso de líquidos e toxinas.',
       duracao: 'Sessões em torno de 50 minutos. A frequência é ajustada conforme o objetivo: bem-estar, estética ou pós-operatório.',
-      cuidados: 'Manter boa hidratação ao longo do dia, seguir orientações médicas em casos específicos e informar histórico de saúde antes do início do tratamento.'
+      cuidados: 'Manter boa hidratação ao longo do dia, seguir orientações médicas em casos específicos e informar histórico de saúde antes do início do tratamento.',
+      imagem: 'imagens/trat-drenagem-linfatica.png',
+      alt: 'Drenagem linfática em pernas em clínica de estética'
     },
     lipocavitacao: {
       titulo: 'Lipocavitação',
@@ -160,7 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
       indicado: 'Pessoas com acúmulo de gordura localizada em regiões específicas, como abdômen, flancos ou coxas, que buscam melhora de contorno corporal.',
       comoFunciona: 'Utiliza ondas de ultrassom que atingem o tecido adiposo, auxiliando na quebra das células de gordura, que depois serão metabolizadas pelo organismo.',
       duracao: 'Sessões em média de 30 a 40 minutos por área, com intervalo mínimo entre as sessões conforme protocolo profissional.',
-      cuidados: 'Ingerir bastante água ao longo do dia, manter alimentação equilibrada e evitar o procedimento em casos de contraindicações avaliadas em consulta.'
+      cuidados: 'Ingerir bastante água ao longo do dia, manter alimentação equilibrada e evitar o procedimento em casos de contraindicações avaliadas em consulta.',
+      imagem: 'imagens/trat-lipocavitacao.png',
+      alt: 'Aplicação de aparelho de lipocavitação na região abdominal'
     },
     limpeza: {
       titulo: 'Limpeza de Pele',
@@ -168,7 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
       indicado: 'Pessoas com poros obstruídos, cravos, oleosidade excessiva ou que desejam preparar a pele para outros tratamentos estéticos.',
       comoFunciona: 'Inclui etapas como higienização, esfoliação, emoliência, extrações pontuais, máscara calmante e finalização com ativos adequados ao tipo de pele.',
       duracao: 'Sessões em torno de 60 a 75 minutos, com frequência definida conforme o tipo de pele e rotina de cuidados.',
-      cuidados: 'Evitar exposição solar direta nas primeiras 24 a 48 horas, usar filtro solar e seguir as orientações de produtos indicados para manutenção em casa.'
+      cuidados: 'Evitar exposição solar direta nas primeiras 24 a 48 horas, usar filtro solar e seguir as orientações de produtos indicados para manutenção em casa.',
+      imagem: 'imagens/trat-limpeza-pele.png',
+      alt: 'Limpeza de pele profissional em clínica de estética'
     },
     usmicrofocado: {
       titulo: 'Ultrassom Microfocado',
@@ -176,15 +194,19 @@ document.addEventListener('DOMContentLoaded', function() {
       indicado: 'Pessoas que desejam melhorar flacidez leve a moderada, especialmente em região de mandíbula, pescoço e terço inferior da face, sem recorrer à cirurgia.',
       comoFunciona: 'Ondas de ultrassom de alta intensidade são direcionadas em pontos específicos, alcançando camadas profundas da pele e estimulando o colágeno de sustentação.',
       duracao: 'A sessão pode variar entre 40 e 90 minutos, dependendo das áreas tratadas. Os resultados são progressivos, se desenvolvendo ao longo de semanas a meses.',
-      cuidados: 'Seguir as orientações profissionais sobre hidratação da pele, proteção solar e eventuais cuidados específicos após o procedimento.'
+      cuidados: 'Seguir as orientações profissionais sobre hidratação da pele, proteção solar e eventuais cuidados específicos após o procedimento.',
+      imagem: 'imagens/trat-us-microfocado.png',
+      alt: 'Aplicação de ultrassom microfocado na região do rosto'
     },
     peeling: {
       titulo: 'Peeling de Diamante',
       intro: 'Esfoliação mecânica controlada que promove renovação suave da pele, uniformiza o tom e melhora o viço.',
       indicado: 'Pessoas com textura irregular, poros mais aparentes, marcas superficiais ou pele opaca, que buscam uma pele mais lisa e luminosa.',
-      comoFunciona: 'Um ponteira revestida de diamante realiza microesfoliação na superfície da pele, removendo células mortas e estimulando a renovação celular.',
+      comoFunciona: 'Uma ponteira revestida de diamante realiza microesfoliação na superfície da pele, removendo células mortas e estimulando a renovação celular.',
       duracao: 'Sessões rápidas, em média de 30 a 40 minutos, com possibilidade de associação a outros protocolos faciais.',
-      cuidados: 'Utilizar filtro solar diariamente, evitar exposição solar excessiva e seguir as orientações de produtos calmantes e hidratantes após o procedimento.'
+      cuidados: 'Utilizar filtro solar diariamente, evitar exposição solar excessiva e seguir as orientações de produtos calmantes e hidratantes após o procedimento.',
+      imagem: 'imagens/trat-peeling-diamante.png',
+      alt: 'Peeling de diamante sendo realizado na pele do rosto'
     }
   };
 
@@ -199,13 +221,24 @@ document.addEventListener('DOMContentLoaded', function() {
     tratModal.querySelector('.trat-modal-duracao').textContent = dados.duracao;
     tratModal.querySelector('.trat-modal-cuidados').textContent = dados.cuidados;
 
+    const imgEl = tratModal.querySelector('.trat-modal-image');
+    if (imgEl) {
+      if (dados.imagem) {
+        imgEl.src = dados.imagem;
+        imgEl.alt = dados.alt || dados.titulo;
+      } else {
+        imgEl.removeAttribute('src');
+        imgEl.alt = '';
+      }
+    }
+
     abrirModal(tratModal);
   }
 
-  if (tratButtons.length > 0 && tratModal) {
-    tratButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const chave = btn.dataset.trat; // massoterapia, drenagem, etc.
+  if (tratCards.length > 0 && tratModal) {
+    tratCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const chave = card.dataset.trat; // massoterapia, drenagem, limpeza, etc.
         abrirTratamentoModal(chave);
       });
     });
@@ -220,5 +253,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
 });

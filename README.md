@@ -1,56 +1,97 @@
-# 🌸 Clarissa Goettems - Estética Avançada
+# 🌸 Clarissa Goettems – Estética Avançada  
+### Website institucional + portfólio digital  
+---
 
-## Website Institucional e Portfólio de Serviços
+## 🧴 Sobre o Projeto
+
+Este repositório contém o website oficial da **Clínica de Estética Avançada de Clarissa Goettems**, desenvolvido para transmitir sensação premium, profissionalismo e cuidado — com foco em apresentar tratamentos, diferenciais, depoimentos e informações essenciais da clínica.
+
+O site foi construído com atenção obsessiva aos detalhes, priorizando:
+
+- estética moderna e limpa  
+- experiência do usuário fluida  
+- desempenho  
+- clareza das informações  
+- facilidade de navegação  
+
+Todo o design busca reforçar o posicionamento boutique da clínica.
 
 ---
 
-### 📝 Sobre o Projeto
+## 🚀 Status Atual do Projeto
 
-Este é o repositório oficial do **website institucional da Clínica de Estética Avançada de Clarissa Goettems**.
+**VERSÃO ATUAL — TRATAMENTOS REFORMULADOS E MODAL COMPLETO**
 
-O objetivo é apresentar a profissional, seus valores, sua experiência e os serviços oferecidos de forma visualmente elegante, leve e objetiva — transmitindo confiança, profissionalismo e cuidado personalizado.
-
-A construção do site busca entregar uma experiência premium, com atenção minuciosa ao design, usabilidade e estética visual, representando o posicionamento boutique da clínica.
-
----
-
-### 🚀 Status Atual do Projeto
-
-**EM DESENVOLVIMENTO — Próxima etapa: seção de Tratamentos**
-
-| Seção / Funcionalidade | Status | Observações |
-|-----------------------|---------|-------------|
-| Estrutura HTML base | ✅ Concluída | Estrutura semântica organizada e bem distribuída. |
-| Style / Layout Geral | ✅ Estável | Paleta, tipografia e identidade visual definidas. |
-| Header fixo + shrink | ⚠ Estável | Implementado e funcional. Ajustes estéticos premium ficam para a versão 2.0. |
-| Seção Intro (Boas-vindas + Missão, Visão e Valores) | ✅ Concluída | Cards responsivos e layout refinado. |
-| Seção Quem Somos | ✅ Concluída | Texto enxuto e objetivo. |
-| Depoimentos (Swiper) | 🟣 Concluído | Autoplay, bullets customizados e navegação refinada. |
-| Seção Contato | 🟣 Concluída | Redesenho total, pop-up do mapa funcional, layout minimalista. |
-| Seção Tratamentos | ⚠ Em andamento | Prioridade da próxima etapa. |
-| Responsividade geral | ⏳ Pendente | Executar após finalização do conteúdo. |
-| Publicação online | ⏳ Em breve | Após ajustes finais e testes. |
+| Área / Funcionalidade | Status | Detalhes |
+|-----------------------|--------|----------|
+| Estrutura HTML | ✅ Concluída | Semântica limpa e organizada. |
+| Layout geral (CSS) | ✅ Estável | Identidade visual unificada e refinada. |
+| Header com shrink | ⚠ Funcional | Esqueleto pronto; versão “premium” será aplicada depois. |
+| Seção Intro (Missão / Visão / Valores) | ✅ Concluída | Cards elegantes e responsivos. |
+| Seção Quem Somos | ✅ Completa | Texto profissional e visual limpo. |
+| Depoimentos (Swiper) | 🟣 Finalizado | Autoplay, navegação e bullets estilizados. |
+| Seção Contato + Mapa | 🟣 Completa | Mapa com modal full-screen e botão WhatsApp. |
+| **Seção Tratamentos** | 🟢 **Reformulada** | Cards só com imagem + nome + modal detalhado com imagem. |
+| **Modal de Tratamentos** | 🟢 **Completo** | Preenchimento dinâmico, imagem carregada via JS, CTA funcional. |
+| Scripts JS gerais | 🟢 Estáveis | Tabs, modais, swiper, shrink e interações. |
+| Responsividade | ⏳ Em andamento | Será finalizada após fechar conteúdo definitivo. |
+| Publicação / Deploy | ⏳ Próximo passo | Após testes finais e ajustes finos. |
 
 ---
 
-### 🎯 Próxima Etapa
-- **Preencher e estruturar a seção de Tratamentos**
-- Ajustes de espaçamento global entre seções
-- Responsividade completa
-- Subir para produção (Hospedagem)
+## ✨ O que foi implementado recentemente
 
-Versão 2.0 prevista:
-- Shrink premium com blur e animações
-- Possível refatoração usando componentes modulares
-- Melhorias acessibilidade/WAI e otimização
+### ✔ Cards de tratamentos (corporais e faciais)
+- Agora exibem **somente imagem + título**, com estética premium.  
+- Todo o texto explicativo fica no modal — reduz ruído e melhora impacto visual.
+
+### ✔ Modal de tratamentos totalmente refeito
+- Recebe **imagem específica** para cada tratamento (PNG ou JPG).
+- Preenchido 100% via JavaScript com:
+  - título  
+  - introdução  
+  - indicações  
+  - como funciona  
+  - duração  
+  - cuidados  
+  - imagem em alta resolução  
+
+### ✔ Estrutura de dados consolidada
+O `tratamentosDetalhes` agora é um “mini banco de dados” local, organizado e ampliável.
+
+### ✔ Cards clicáveis
+Não há mais botão “Ver detalhes”: o **card inteiro é clicável**, com animação hover suave.
 
 ---
 
-### 🧠 Tecnologias Utilizadas
+## 🎯 Próximas Etapas
 
-- **HTML5** — Estrutura semântica, acessível e organizada
-- **CSS3** — Flexbox, Grid, transições, responsividade e refinamento visual
-- **JavaScript puro** — Interações, controle de interface e componentes como Swiper
+- Finalização da **responsividade completa** (mobile + tablet + desktops grandes).
+- Reforços visuais na seção de tratamentos:
+  - hover premium  
+  - animações leves  
+  - microtransições  
+- Revisão tipográfica global.
+- Testes cross-browser.
+- Deploy final.
+
+**Versão 2.0 (prevista):**
+- Header shrink com blur e transições suaves.
+- Efeitos parallax leves.
+- Componentização modular do JS.
+- Otimização profunda de acessibilidade (WAI-ARIA).
+- Otimização de performance (Lighthouse).
+
+---
+
+## 🧠 Tecnologias Utilizadas
+
+- **HTML5** – Estrutura semântica robusta.  
+- **CSS3** – Grid, Flexbox, transições, estética moderna.  
+- **JavaScript Vanilla** – Tabs, modais, carregamento dinâmico, Swiper.  
+- **Swiper.js** – Carrossel de depoimentos com autoplay.  
+- **Font Awesome** – Ícones.  
+- **Google Maps Embed** – Mapa interativo da clínica.
 
 ---
 
