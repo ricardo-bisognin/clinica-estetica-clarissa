@@ -37,6 +37,26 @@ body.header-large-scroll-offset {
 
 /* Header */
 
+/* =========================
+   MENU HAMBÚRGUER – BASE
+========================= */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background-color: #333;
+  display: block;
+}
+
 /* HEADER como contêiner fixo invisível */
 header {
   position: fixed;
@@ -1052,132 +1072,132 @@ footer {
     margin: 5px 0;
 }
 
-/*Responsividade*/
+/* =====================================
+   RESPONSIVIDADE – MOBILE
+   até 767px
+===================================== */
 
-@media (max-width: 768px) {
-    header {
-        min-height: auto;
-        flex-direction: column;
-        padding: 10px 20px;
-    }
+@media (max-width: 767px) {
 
-    header img {
-        position: static;
-        width: 120px;
-        margin-bottom: 10px;
-        transform: none;
-        left: auto;
-        top: auto;
-    }
+  /* HEADER */
+  header {
+    height: auto;
+    padding: 12px 16px;
+  }
 
-    .header-right-content{
-        width: 100%;
-        order: 2;
-    }
+  .header-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    h1 {
-        font-size: 1.5em;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+  /* LOGO some no mobile */
+  .logo {
+    display: none;
+  }
 
-    nav ul li {
-        margin: 0 5px;
-    }
+  /* Menu desktop some */
+  nav {
+    display: none;
+  }
 
-    .intro-content-wrapper{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  /* Hambúrguer aparece à direita */
+  .menu-toggle {
+    display: flex;
+  }
 
-    .intro-text-block {
-        flex-basis: 100%;
-        order: 2;
-    }
+  /* MENU MOBILE */
+  nav.mobile-active {
+    display: flex;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+    z-index: 999;
+  }
 
-    .intro-text-block p {
-        text-align: justify;
-    }
+  nav.mobile-active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    .intro-image-block {
-        flex-basis: 100%;
-        order: 1;
-    }
+  nav.mobile-active ul li {
+    display: block;
+  }
 
-    .intro-image-block img {
-        max-width: 80%;
-    }
+  nav.mobile-active a {
+    font-size: 16px;
+    padding: 8px 0;
+  }
 
-    .bio-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  /* QUEM SOMOS */
+  .quem-somos {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .bio-img {
-        width: 60%;
-        margin: 0 auto 20px auto;
-    }
+  .quem-somos img {
+    max-width: 280px;
+    margin: 0 auto 16px;
+  }
 
-  .highlight-cards {
-    flex-wrap: wrap;
+  /* TRATAMENTOS */
+  .tratamentos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* MODAL */
+  .trat-modal-content {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* NOSSA CLÍNICA */
+  .clinic-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .map-box iframe {
+    height: 200px;
+  }
+
+  /* FOOTER */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-groups {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px 24px;
     justify-content: center;
   }
+}
 
-  .highlight-card {
-    max-width: 260px;
-    margin-bottom: 12px;
+/* =====================================
+   RESPONSIVIDADE – TABLET
+   768px até 1023px
+===================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .tratamentos-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-    .testimonial-swiper-container {
-        padding: 0 5px;        
-    }
+  .clinic-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        font-size: 1.0em;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-container {
-        grid-template-areas:
-        "info"
-        "social"
-        "map"
-        "form";
-        grid-template-columns: 1fr;
-    }
-
-    .social-icons {
-        flex-direction: column;        
-        gap: 10px;
-    }
-
-    .social-icons a {
-        justify-content: center;
-        margin-top: auto;
-        padding: 5px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-groups {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .footer-links,
-    .social-media {
-        flex-direction: column;
-        gap: 5px;
-    }
 }

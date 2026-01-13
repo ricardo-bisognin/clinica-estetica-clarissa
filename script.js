@@ -132,6 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('mobile-active');
+    });
+  }
+
   // 7. Modal de DETALHES dos TRATAMENTOS
   const tratModal = document.getElementById('tratModal');
   const tratClose = document.getElementById('tratClose');
