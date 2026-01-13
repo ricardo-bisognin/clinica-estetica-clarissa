@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 5000,
+      delay: 10000,
       disableOnInteraction: false,
     }
   });
@@ -138,46 +138,73 @@ document.addEventListener('DOMContentLoaded', function() {
   const tratCards = document.querySelectorAll('.trat-card[data-trat]');
 
   const tratamentosDetalhes = {
-    massoterapia: {
-      titulo: 'Massoterapia Relaxante',
-      intro: 'Um momento de pausa para o corpo e para a mente, com técnicas manuais focadas em aliviar tensões e trazer bem-estar.',
-      indicado: 'Pessoas com rotina intensa, estresse elevado, dores musculares leves ou tensão acumulada em pescoço, ombros e região lombar.',
-      comoFunciona: 'Por meio de manobras manuais específicas, trabalhamos músculos e tecidos moles, melhorando a circulação e liberando pontos de tensão.',
-      duracao: 'Sessões de aproximadamente 50 a 60 minutos, com frequência definida de acordo com a necessidade e objetivo de cada pessoa.',
-      cuidados: 'Evitar grandes refeições imediatamente antes da sessão e comunicar qualquer desconforto ou sensibilidade durante o atendimento.',
-      imagem: 'imagens/trat-massoterapia-relaxante.png',
-      alt: 'Massoterapia relaxante em clínica de estética'
-    },
-    massomodeladora: {
-      titulo: 'Massoterapia Modeladora',
-      intro: 'Técnica manual com foco em contorno corporal, atuando em regiões específicas para melhorar o aspecto da pele e auxiliar na redução de medidas.',
-      indicado: 'Pessoas que desejam melhorar o contorno corporal, o aspecto de pele irregular e complementar protocolos de emagrecimento e definição.',
-      comoFunciona: 'A massoterapia modeladora utiliza manobras mais intensas e ritmadas, estimulando circulação, mobilização de tecidos e remodelagem dos contornos corporais.',
-      duracao: 'Sessões em média de 50 a 60 minutos, com frequência ajustada conforme objetivo e avaliação profissional.',
-      cuidados: 'Evitar sessões em áreas com inflamação ou dor intensa, comunicar desconfortos durante a sessão e seguir o intervalo entre sessões recomendado pela profissional.',
-      imagem: 'imagens/trat-massoterapia-modeladora.png',
-      alt: 'Massagem modeladora em região abdominal em clínica de estética'
-    },
-    drenagem: {
-      titulo: 'Drenagem Linfática',
-      intro: 'Técnica manual suave que estimula o sistema linfático, ajudando na redução de inchaços e da sensação de peso nas pernas.',
-      indicado: 'Pessoas com retenção de líquidos, sensação de inchaço, pernas cansadas ou em fase de pós-operatório (sempre com liberação médica).',
-      comoFunciona: 'São realizados movimentos leves, rítmicos e direcionados ao longo dos trajetos linfáticos, auxiliando o organismo a eliminar o excesso de líquidos e toxinas.',
-      duracao: 'Sessões em torno de 50 minutos. A frequência é ajustada conforme o objetivo: bem-estar, estética ou pós-operatório.',
-      cuidados: 'Manter boa hidratação ao longo do dia, seguir orientações médicas em casos específicos e informar histórico de saúde antes do início do tratamento.',
-      imagem: 'imagens/trat-drenagem-linfatica.png',
-      alt: 'Drenagem linfática em pernas em clínica de estética'
-    },
-    lipocavitacao: {
-      titulo: 'Lipocavitação',
-      intro: 'Tecnologia que atua diretamente na gordura localizada, auxiliando na remodelação dos contornos corporais.',
-      indicado: 'Pessoas com acúmulo de gordura localizada em regiões específicas, como abdômen, flancos ou coxas, que buscam melhora de contorno corporal.',
-      comoFunciona: 'Utiliza ondas de ultrassom que atingem o tecido adiposo, auxiliando na quebra das células de gordura, que depois serão metabolizadas pelo organismo.',
-      duracao: 'Sessões em média de 30 a 40 minutos por área, com intervalo mínimo entre as sessões conforme protocolo profissional.',
-      cuidados: 'Ingerir bastante água ao longo do dia, manter alimentação equilibrada e evitar o procedimento em casos de contraindicações avaliadas em consulta.',
-      imagem: 'imagens/trat-lipocavitacao.png',
-      alt: 'Aplicação de aparelho de lipocavitação na região abdominal'
-    },
+
+  manuais: {
+    titulo: "Terapias Manuais",
+    intro: "Tratamentos realizados por meio de técnicas manuais, escolhidas de forma personalizada conforme as necessidades e objetivos de cada pessoa.",
+    indicado: "",
+    comoFunciona: "Após avaliação, a profissional define a técnica ou combinação de técnicas mais adequadas para cada atendimento.",
+    duracao: "Sessões com duração média de 50 a 60 minutos.",
+    cuidados: "Comunicar qualquer desconforto durante a sessão e seguir as orientações profissionais.",
+    imagem: "imagens/trat-massoterapia-relaxante.png",
+    subtratamentos: [
+      {
+        nome: "Massoterapia Relaxante",
+        desc: ""
+      },
+      {
+        nome: "Massoterapia Modeladora",
+        desc: ""
+      },
+      {
+        nome: "Drenagem Linfática",
+        desc: ""
+      }
+    ]
+  },
+
+  vacuo: {
+    titulo: "Endermologia & Terapias a Vácuo",
+    intro: "Tratamentos realizados com tecnologia de sucção controlada, voltados para modelagem corporal, estímulo circulatório e melhora da textura da pele.",
+    indicado: "",
+    comoFunciona: "A técnica utiliza ponteiras específicas com sucção a vácuo, ajustadas conforme a região e o objetivo do tratamento.",
+    duracao: "Sessões com duração média de 40 a 60 minutos.",
+    cuidados: "Evitar o tratamento em áreas sensíveis ou doloridas e seguir as orientações profissionais.",
+    imagem: "imagens/endermologia - Pernas.png",
+    subtratamentos: [
+      {
+        nome: "Endermologia Corporal",
+        desc: ""
+      },
+      {
+        nome: "Pump Up Glúteos",
+        desc: ""
+      },
+      {
+        nome: "Modelagem Corporal a Vácuo",
+        desc: ""
+      }
+    ]
+  },
+  ultrassom: {
+    titulo: "Ultrassom",
+    intro: "Tratamentos realizados com tecnologia de ultrassom, voltados para gordura localizada e melhora do contorno corporal.",
+    indicado: "",
+    comoFunciona: "O ultrassom atua em camadas específicas do tecido, auxiliando processos metabólicos e estéticos.",
+    duracao: "Sessões de 30 a 40 minutos por área, conforme avaliação profissional.",
+    cuidados: "Manter boa hidratação e seguir orientações profissionais após o procedimento.",
+    imagem: "imagens/lipocavitacao-abdomen.png",
+    subtratamentos: [
+      {
+        nome: "Lipocavitação",
+        desc: ""
+      },
+      {
+        nome: "Ultrassom Corporal",
+        desc: ""
+      }
+    ]
+  },
     limpeza: {
       titulo: 'Limpeza de Pele',
       intro: 'Protocolo completo para remover impurezas, controlar oleosidade e devolver frescor e viço à pele.',
@@ -216,7 +243,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tratModal.querySelector('.trat-modal-title').textContent = dados.titulo;
     tratModal.querySelector('.trat-modal-intro').textContent = dados.intro;
-    tratModal.querySelector('.trat-modal-indicado').textContent = dados.indicado;
+    const indicadoTexto = tratModal.querySelector('.trat-modal-indicado');
+    const indicadoBloco = tratModal.querySelector('.trat-modal-indicado-bloco');
+
+    if (dados.indicado && dados.indicado.trim() !== "") {
+      indicadoTexto.textContent = dados.indicado;
+      indicadoBloco.style.display = '';
+    } else {
+      indicadoTexto.textContent = '';
+      indicadoBloco.style.display = 'none';
+    }
     tratModal.querySelector('.trat-modal-como-funciona').textContent = dados.comoFunciona;
     tratModal.querySelector('.trat-modal-duracao').textContent = dados.duracao;
     tratModal.querySelector('.trat-modal-cuidados').textContent = dados.cuidados;
@@ -230,6 +266,22 @@ document.addEventListener('DOMContentLoaded', function() {
         imgEl.removeAttribute('src');
         imgEl.alt = '';
       }
+    }
+
+    const subBox = tratModal.querySelector('.trat-modal-subtratamentos');
+
+    if (subBox && dados.subtratamentos) {
+      subBox.innerHTML = `
+        <h4>Tratamentos incluídos</h4>
+        ${dados.subtratamentos.map(sub => `
+          <div class="trat-sub-item">
+            <strong>${sub.nome}</strong>
+            <p>${sub.desc}</p>
+          </div>
+        `).join('')}
+      `;
+    } else if (subBox) {
+      subBox.innerHTML = '';
     }
 
     abrirModal(tratModal);

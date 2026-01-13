@@ -1,103 +1,86 @@
-# 🌸 Clarissa Goettems – Estética Avançada  
-### Website institucional + portfólio digital  
+# 🌸 Clínica de Estética – Clarissa Goettems  
+Website institucional – Versão 1.0
+
 ---
 
 ## 🧴 Sobre o Projeto
 
-Este repositório contém o website oficial da **Clínica de Estética Avançada de Clarissa Goettems**, desenvolvido para transmitir sensação premium, profissionalismo e cuidado — com foco em apresentar tratamentos, diferenciais, depoimentos e informações essenciais da clínica.
+Este repositório contém o site institucional da **Clínica de Estética da Clarissa Goettems**, desenvolvido com foco em posicionamento premium, clareza de informação e experiência do usuário.
 
-O site foi construído com atenção obsessiva aos detalhes, priorizando:
+O projeto foi pensado para:
+- transmitir confiança e profissionalismo
+- apresentar tratamentos de forma organizada e elegante
+- evitar excesso de informação visual
+- permitir evolução futura sem retrabalho
 
-- estética moderna e limpa  
-- experiência do usuário fluida  
-- desempenho  
-- clareza das informações  
-- facilidade de navegação  
-
-Todo o design busca reforçar o posicionamento boutique da clínica.
+A proposta do site é **informar, acolher e orientar**, não apenas “vender serviços”.
 
 ---
 
-## 🚀 Status Atual do Projeto
+## ✅ Status do Projeto
 
-**VERSÃO ATUAL — TRATAMENTOS REFORMULADOS E MODAL COMPLETO**
+### 🔵 Versão 1.0 — **CONCLUÍDA**
 
-| Área / Funcionalidade | Status | Detalhes |
-|-----------------------|--------|----------|
-| Estrutura HTML | ✅ Concluída | Semântica limpa e organizada. |
-| Layout geral (CSS) | ✅ Estável | Identidade visual unificada e refinada. |
-| Header com shrink | ⚠ Funcional | Esqueleto pronto; versão “premium” será aplicada depois. |
-| Seção Intro (Missão / Visão / Valores) | ✅ Concluída | Cards elegantes e responsivos. |
-| Seção Quem Somos | ✅ Completa | Texto profissional e visual limpo. |
-| Depoimentos (Swiper) | 🟣 Finalizado | Autoplay, navegação e bullets estilizados. |
-| Seção Contato + Mapa | 🟣 Completa | Mapa com modal full-screen e botão WhatsApp. |
-| **Seção Tratamentos** | 🟢 **Reformulada** | Cards só com imagem + nome + modal detalhado com imagem. |
-| **Modal de Tratamentos** | 🟢 **Completo** | Preenchimento dinâmico, imagem carregada via JS, CTA funcional. |
-| Scripts JS gerais | 🟢 Estáveis | Tabs, modais, swiper, shrink e interações. |
-| Responsividade | ⏳ Em andamento | Será finalizada após fechar conteúdo definitivo. |
-| Publicação / Deploy | ⏳ Próximo passo | Após testes finais e ajustes finos. |
+A versão 1.0 representa o site completo, funcional e pronto para uso institucional.
 
----
+Inclui:
 
-## ✨ O que foi implementado recentemente
+- Estrutura HTML semântica e organizada
+- Identidade visual consistente (estética clean e premium)
+- Header fixo com comportamento dinâmico ao scroll
+- Seção institucional (Quem Somos)
+- Seção de tratamentos com organização por categorias:
+  - Terapias Manuais
+  - Endermologia & Terapias a Vácuo
+  - Ultrassom
+  - Tratamentos Faciais (Limpeza, Peeling, Ultrassom Microfocado)
+- Cards visuais com imagem + título
+- Modais informativos dinâmicos:
+  - Conteúdo contextualizado por tratamento
+  - Imagens específicas por categoria
+  - Subtratamentos agregados quando aplicável
+  - Exibição condicional de seções (sem campos vazios)
+- Integração com WhatsApp para agendamento
+- Seção de depoimentos
+- Seção de localização com mapa interativo
+- JavaScript organizado para interações essenciais
+- Projeto estável, testado e funcional
 
-### ✔ Cards de tratamentos (corporais e faciais)
-- Agora exibem **somente imagem + título**, com estética premium.  
-- Todo o texto explicativo fica no modal — reduz ruído e melhora impacto visual.
-
-### ✔ Modal de tratamentos totalmente refeito
-- Recebe **imagem específica** para cada tratamento (PNG ou JPG).
-- Preenchido 100% via JavaScript com:
-  - título  
-  - introdução  
-  - indicações  
-  - como funciona  
-  - duração  
-  - cuidados  
-  - imagem em alta resolução  
-
-### ✔ Estrutura de dados consolidada
-O `tratamentosDetalhes` agora é um “mini banco de dados” local, organizado e ampliável.
-
-### ✔ Cards clicáveis
-Não há mais botão “Ver detalhes”: o **card inteiro é clicável**, com animação hover suave.
+👉 **Esta versão está oficialmente encerrada e pronta para publicação.**
 
 ---
 
-## 🎯 Próximas Etapas
+### 🟣 Versão 2.0 — **PLANEJADA (PÓS-INAUGURAÇÃO DA CLÍNICA)**
 
-- Finalização da **responsividade completa** (mobile + tablet + desktops grandes).
-- Reforços visuais na seção de tratamentos:
-  - hover premium  
-  - animações leves  
-  - microtransições  
-- Revisão tipográfica global.
-- Testes cross-browser.
-- Deploy final.
+A versão 2.0 será desenvolvida futuramente, após o início das atividades presenciais da clínica, e poderá incluir:
 
-**Versão 2.0 (prevista):**
-- Header shrink com blur e transições suaves.
-- Efeitos parallax leves.
-- Componentização modular do JS.
-- Otimização profunda de acessibilidade (WAI-ARIA).
-- Otimização de performance (Lighthouse).
+- Sistema de agendamento online
+- Área administrativa / painel de controle
+- Conteúdo dinâmico gerenciado via CMS
+- Melhorias avançadas de responsividade
+- Otimizações adicionais de performance
+- Evoluções visuais e microinterações
+- Integrações externas (pagamentos, agenda, automações)
+
+👉 **Nada disso é pendência da versão atual.**  
+A versão 1.0 cumpre integralmente sua proposta.
 
 ---
 
-## 🧠 Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
-- **HTML5** – Estrutura semântica robusta.  
-- **CSS3** – Grid, Flexbox, transições, estética moderna.  
-- **JavaScript Vanilla** – Tabs, modais, carregamento dinâmico, Swiper.  
-- **Swiper.js** – Carrossel de depoimentos com autoplay.  
-- **Font Awesome** – Ícones.  
-- **Google Maps Embed** – Mapa interativo da clínica.
+- HTML5
+- CSS3 (Flexbox / Grid / Transições)
+- JavaScript (Vanilla)
+- Swiper.js (depoimentos)
+- Google Maps Embed
+- Font Awesome
 
 ---
 
 ### ⚙ Como Rodar Localmente
 
-```bash
+```
 git clone https://github.com/ricardo-bisognin/clinica-estetica-clarissa
 ```
 
@@ -107,8 +90,8 @@ Depois basta abrir o arquivo `index.html` no navegador.
 
 ### ✍ Autor
 
-**Ricardo Bisognin Dias**  
-Desenvolvedor Front-End
+Projeto desenvolvido por **Ricardo Bisognin**  
+com apoio conceitual, técnico e arquitetural do Clippy™
 
 📍 Rio Grande do Sul – Brasil  
 📧 bisognin.dias@gmail.com  
