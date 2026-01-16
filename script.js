@@ -133,11 +133,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('nav');
+  const navMenu = document.querySelector('nav');  
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
+  if (menuToggle && navMenu && header) {
+
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       navMenu.classList.toggle('mobile-active');
+      header.classList.toggle('menu-open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.remove('mobile-active');
+        header.classList.remove('menu-open');
+      }
     });
   }
 
