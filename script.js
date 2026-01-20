@@ -49,9 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
     elementoAnoAtual.textContent = new Date().getFullYear();
   }
 
-  // 3. Header shrink no scroll
-  window.addEventListener('scroll', checkScroll);
-  checkScroll();
+  // 3. Header shrink no scroll (somente desktop)
+  if (window.innerWidth > 768) {
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+  }
 
   // 4. Swiper dos depoimentos
   const swiper = new Swiper('.testimonial-swiper-container', {
