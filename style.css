@@ -126,6 +126,7 @@ header img {
     transform: translateY(-50%) scale(1);
     transform-origin: center;
     transition: transform 0.45s ease;
+    z-index: 1;
 }
 
 header.header-scrolled img {
@@ -1111,6 +1112,10 @@ footer {
 
 @media (max-width: 767px) {
 
+  body {
+    font-size: 14px;
+  }
+
   main {
     padding-top: 0px;
   }
@@ -1136,11 +1141,6 @@ footer {
     all: unset;
   }
 
-  header img {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   /* HEADER – LOGO COMO MARCA DE FUNDO */
   .header-content-wrapper {
     display: flex;
@@ -1156,20 +1156,14 @@ footer {
     font-size: 1.1rem;
     line-height: 1.2;
     margin-bottom: 1px;
+    z-index: 2;
   }
 
   .header-content-wrapper p {
     font-size: 1.0rem;
     line-height: 1;
     margin: 0;
-  }
-
-  header,
-  header::before,
-  .header-bg {
-    border-radius: 22px;
-    overflow: visible;
-    z-index: 0;
+    z-index: 2;
   }
 
   header.scrolled .header-content-wrapper h1 {
@@ -1184,24 +1178,6 @@ footer {
   header.menu-open .header-content-wrapper h1,
   header.menu-open .header-content-wrapper p {
     display: none;
-  }
-
-  .logo {
-    max-width: 18px;
-    opacity: 0.08;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
-
-  /* Texto sempre acima da logo */
-  .header-title,
-  .header-text,
-  .header-content-wrapper h1,
-  .header-content-wrapper p {
-    position: relative;
-    z-index: 2;
   }
   
 /* NAV MOBILE DENTRO DO HEADER */
@@ -1223,8 +1199,7 @@ footer {
     display: flex !important;
     justify-content: center;
     top: 50%;
-    margin-top: 0;
-    transform: translateY(-50%);
+    margin-top: 0;    
     margin-left: 2%;
   }
 
@@ -1277,6 +1252,8 @@ header.menu-open .header-content-wrapper {
     height: 75px !important;
     max-height: 75px !important;
     width: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);    
   }
 
   /* INTRO – ANTI VAZAMENTO */
@@ -1285,6 +1262,32 @@ header.menu-open .header-content-wrapper {
   .intro-text-block {
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  .intro-welcome h2 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+  }
+
+  .intro-welcome p {
+    font-size: 0.95em;
+    line-height: 1.45;
+  }
+
+  .intro-image-block {
+    display: none;
+    flex-basis: 100%;
+  }
+
+  .highlight-cards{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .highlight-card {    
+    width: calc(50% - 6px);
+    height: auto;
   }
 
     /* QUEM SOMOS – COLUNA ÚNICA */
