@@ -1248,13 +1248,15 @@ header.menu-open .header-content-wrapper {
     display: none !important;
   }
 
-  header img {
+header img {
     height: 75px !important;
     max-height: 75px !important;
     width: auto;
     left: 50%;
-    transform: translate(-50%, -50%);    
-  }
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
 
   /* INTRO – ANTI VAZAMENTO */
   .intro-welcome,
@@ -1291,33 +1293,113 @@ header.menu-open .header-content-wrapper {
   }
 
     /* QUEM SOMOS – COLUNA ÚNICA */
-  .quem-somos {
-    flex-direction: column;
-    text-align: center;
+
+  .bio-container {
+      flex-direction: column;
+      gap: 16px;
   }
 
-  .quem-somos img {
-    order: -1;
-    max-width: 280px;
-    margin: 0 auto 16px;
+  .bio-img {
+      order: 2;
+      width: 100%;
+  }
+
+  .bio-text {
+      order: 3;
+      text-align: center;
+  }
+
+  .bio-img img {
+      max-width: 150px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      border-radius: 50%;
+  }
+
+  .bio-text p {
+      font-size: 0.95em;
+      line-height: 1.5;
   }
 
   /* TRATAMENTOS – MOBILE */
+
+  .tratamentos {
+  height: auto;
+  overflow: visible;
+  }
+
   .tratamentos-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    align-items: stretch;
   }
 
   .trat-card {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
   }
 
   .trat-card img {
-    width: 100%;
-    height: 180px;
+    width: 100%;    
+    height: 170px;
     object-fit: cover;
+  }
+
+    .trat-modal-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trat-modal-image-box {
+    display: none;
+  }
+
+  .trat-modal-info {
+    width: 100%;
+  }
+
+  .trat-modal-cta {
+    width: 100%;    
+    border-radius: 8px;
+    box-sizing: border-box;
+    align-self: stretch;
+  }
+
+  /* DEPOIMENTOS – SETAS MENORES NO MOBILE */
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    --swiper-navigation-size: 28px;
+
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px;
+  }
+
+  
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+    
+  .swiper-slide {
+    height: auto;
+    display: flex;
+  }
+
+  .testimonial-card {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card .testimonial-footer {
+    margin-top: auto;
   }
 
   /* NOSSA CLÍNICA – SEM MAPA NO MOBILE */
@@ -1330,19 +1412,77 @@ header.menu-open .header-content-wrapper {
     text-align: center;
   }
 
+  .clinic-info p {
+    line-height: 0.8;
+    margin-bottom: 8px;
+  }
+
+  .map-frame {
+    width: 100%;
+    max-width: 220px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
   /* FOOTER – MOBILE */
+
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  gap: 7px;
+  text-align: left;
+  }
+
+  .footer-content p {
+    max-width: 100%;
+    margin: 0;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 1.0;
   }
 
   .footer-groups {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-align: right;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      "priv termos"
+      "insta whats";
+    gap: 6px 6px;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .footer-links a:nth-child(1) {
+    grid-area: priv;
+  }
+
+  .footer-links a:nth-child(2) {
+    grid-area: termos;
+  }
+
+  .social-media a:nth-child(1) {
+    grid-area: insta;
+  }
+
+  .social-media a:nth-child(2) {
+    grid-area: whats;
+  }
+
+  .footer-links,
+  .social-media {
+  display: contents;
+}
+
+  .footer-links a,
+  .social-media a {
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.8em;
   }
 
 }
