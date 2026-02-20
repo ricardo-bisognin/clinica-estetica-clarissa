@@ -1,106 +1,120 @@
-# 🌸 Clínica de Estética – Clarissa Goettems  
-Website institucional – Versão 1.0
+# 🌸 Clínica Clarissa Goettems – Estética Avançada
+
+Este repositório contém o código-fonte do **site institucional da Clínica Clarissa Goettems – Estética Avançada**.
+
+O projeto foi desenvolvido com foco em **responsividade real (mobile → tablet → desktop)**, organização de código e facilidade de manutenção, chegando a uma **versão 1.0 estável e pronta para publicação**.
 
 ---
 
-## 🧴 Sobre o Projeto
+## ✨ Visão Geral
 
-Este repositório contém o site institucional da **Clínica de Estética da Clarissa Goettems**, desenvolvido com foco em posicionamento premium, clareza de informação e experiência do usuário.
+O site apresenta:
 
-O projeto foi pensado para:
-- transmitir confiança e profissionalismo
-- apresentar tratamentos de forma organizada e elegante
-- evitar excesso de informação visual
-- permitir evolução futura sem retrabalho
+* Página institucional moderna e leve
+* Navegação clara e objetiva
+* Layout responsivo em três breakpoints
+* Conteúdo focado em conversão e apresentação profissional
 
-A proposta do site é **informar, acolher e orientar**, não apenas “vender serviços”.
+O desenvolvimento priorizou:
 
----
-
-## ✅ Status do Projeto
-
-### 🔵 Versão 1.0 — **CONCLUÍDA**
-
-A versão 1.0 representa o site completo, funcional e pronto para uso institucional.
-
-Inclui:
-
-- Estrutura HTML semântica e organizada
-- Identidade visual consistente (estética clean e premium)
-- Header fixo com comportamento dinâmico ao scroll
-- Seção institucional (Quem Somos)
-- Seção de tratamentos com organização por categorias:
-  - Terapias Manuais
-  - Endermologia & Terapias a Vácuo
-  - Ultrassom
-  - Tratamentos Faciais (Limpeza, Peeling, Ultrassom Microfocado)
-- Cards visuais com imagem + título
-- Modais informativos dinâmicos:
-  - Conteúdo contextualizado por tratamento
-  - Imagens específicas por categoria
-  - Subtratamentos agregados quando aplicável
-  - Exibição condicional de seções (sem campos vazios)
-- Integração com WhatsApp para agendamento
-- Seção de depoimentos
-- Seção de localização com mapa interativo
-- JavaScript organizado para interações essenciais
-- Projeto estável, testado e funcional
-
-👉 **Esta versão está oficialmente encerrada e pronta para publicação.**
+* Experiência do usuário (UX)
+* Consistência visual entre seções
+* Código limpo, sem gambiarras
+* Facilidade de evolução futura (v1.1, v2.0…)
 
 ---
 
-### 🟣 Versão 2.0 — **PLANEJADA (PÓS-INAUGURAÇÃO DA CLÍNICA)**
+## 📱 Responsividade
 
-A versão 2.0 será desenvolvida futuramente, após o início das atividades presenciais da clínica, e poderá incluir:
+O layout foi pensado seguindo boas práticas modernas:
 
-- Sistema de agendamento online
-- Área administrativa / painel de controle
-- Conteúdo dinâmico gerenciado via CMS
-- Melhorias avançadas de responsividade
-- Otimizações adicionais de performance
-- Evoluções visuais e microinterações
-- Integrações externas (pagamentos, agenda, automações)
+### Mobile (≤ 767px)
 
-👉 **Nada disso é pendência da versão atual.**  
-A versão 1.0 cumpre integralmente sua proposta.
+* Layout em coluna única
+* Menu hambúrguer
+* Header estático (sem shrink)
+* Conteúdo otimizado para scroll vertical
+
+### Tablet (768px – 1023px)
+
+* Layout híbrido
+* Grids reintroduzidos (2 e 3 colunas)
+* Header estático
+* Largura de conteúdo unificada
+
+### Desktop (≥ 1024px)
+
+* Layout completo
+* Header com efeito de shrink no scroll
+* Navegação horizontal
+* Maior respiro visual
 
 ---
 
-## 🛠 Tecnologias Utilizadas
-
-- HTML5
-- CSS3 (Flexbox / Grid / Transições)
-- JavaScript (Vanilla)
-- Swiper.js (depoimentos)
-- Google Maps Embed
-- Font Awesome
-
----
-
-### ⚙ Como Rodar Localmente
+## 🧱 Estrutura de Arquivos
 
 ```
-git clone https://github.com/ricardo-bisognin/clinica-estetica-clarissa
+📁 projeto/
+├── index.html      # Estrutura principal do site
+├── style.css       # Estilos globais + responsividade
+├── script.js       # Interações (menu, modal, header)
+├── assets/         # Imagens, ícones e mídias
+└── README.md       # Documentação do projeto
 ```
 
-Depois basta abrir o arquivo `index.html` no navegador.
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* HTML5
+* CSS3 (Flexbox + Grid)
+* JavaScript (vanilla)
+
+Sem frameworks externos — foco total em controle, performance e clareza.
 
 ---
 
-### ✍ Autor
+## 🚀 Como Executar Localmente
 
-Projeto desenvolvido por **Ricardo Bisognin**  
-com apoio conceitual, técnico e arquitetural do Clippy™
+1. Clone o repositório:
 
-📍 Rio Grande do Sul – Brasil  
-📧 bisognin.dias@gmail.com  
-🔗 GitHub: [@ricardo-bisognin](https://github.com/ricardo-bisognin)
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+2. Abra o arquivo `index.html` no navegador
+
+Pronto. Não há dependências externas.
 
 ---
 
-### 💗 Mensagem final
+## 🧠 Decisões de Projeto
+
+* **Mobile-first na prática**: ajustes progressivos para tablet e desktop
+* **Header dinâmico apenas no desktop**
+* **Containers de largura consistentes** para alinhamento visual
+* **Separação clara de responsabilidades** entre HTML, CSS e JS
+
+Essas decisões garantem estabilidade e facilidade de manutenção.
 
 ---
 
-> Projeto construído com dedicação, café, algumas horas brigando com CSS e um pitada de obsessão saudável por detalhes ❤️
+## 🔮 Próximos Passos
+
+* Ajustes finos de tipografia
+* Microanimações no desktop
+* Otimização de imagens
+* SEO básico (meta tags, headings)
+* Acessibilidade (ARIA, foco, contraste)
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso institucional da **Clínica Clarissa Goettems – Estética Avançada**.
+
+Todos os direitos reservados.
+
+---
+
+Desenvolvido com paciência, método e muitos cafés ☕😄

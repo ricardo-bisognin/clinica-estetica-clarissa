@@ -49,11 +49,20 @@ document.addEventListener('DOMContentLoaded', function() {
     elementoAnoAtual.textContent = new Date().getFullYear();
   }
 
-  // 3. Header shrink no scroll (somente desktop)
-  if (window.innerWidth > 768) {
-    window.addEventListener('scroll', checkScroll);
-    checkScroll();
+  function initHeaderScroll() {
+    if (window.innerWidth >= 1024) {
+      window.addEventListener('scroll', checkScroll);
+      checkScroll();
+    } else {
+      // MOBILE + TABLET: header estático
+      window.removeEventListener('scroll', checkScroll);
+      header.classList.remove('header-scrolled');
+      body.classList.remove('header-large-scroll-offset');
+    }
   }
+
+  initHeaderScroll();
+  window.addEventListener('resize', initHeaderScroll);
 
   // 4. Swiper dos depoimentos
   const swiper = new Swiper('.testimonial-swiper-container', {
